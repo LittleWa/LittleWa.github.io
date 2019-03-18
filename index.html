@@ -68,6 +68,24 @@
 				}
 		}
 </style>
+	<script>
+		  let divTyping = document.getElementById('text')
+		  let i = 0,
+		    timer = 0,
+		    str = '唧唧复唧唧，瓜瓜哭唧唧。\n奇奇不闻哭泣声，掀桌执掌熊瓜瓜。问女犯啥错，问女为啥哭。女亦无啥错，再他喵的掀一次(╯‵□′)╯︵┻━┻。\n奇奇听闻次，直呼惹不起。一上气来掀桌几，哪能再热瓜生气\n'
+
+		  function typing () {
+		    if (i <= str.length) {
+		      divTyping.innerHTML = str.slice(0, i++) + '_'
+		      timer = setTimeout('typing()', 200)
+		    }
+		    else {
+		      divTyping.innerHTML = str//结束打字,移除 _ 光标
+		      clearTimeout(timer)
+		    }
+		  }
+			typing()
+	</script>
 	</head>
 	
 	<body>
